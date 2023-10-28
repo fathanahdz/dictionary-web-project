@@ -48,6 +48,7 @@ body{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 100%;
     color: black;
 }
 
@@ -62,6 +63,12 @@ body{
     justify-content: space-between;
     
 
+}
+.word-example {
+    color: black;
+    font-style: italic;
+    border-left: 4px solid #1F2987;
+    padding-left: 16px;
 }
 .result button{
     border: none;
@@ -86,12 +93,12 @@ body{
 .ver b{
     color:#1F2987 ;
 }
-.ver .synonyms{
+.synonyms{
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-.ver .synonyms p{
+.synonyms p{
     display: flex;
     background-color: #1F2987;
     color: white;
@@ -100,13 +107,13 @@ body{
     border-radius: 4px;
 }
 
-.ver ul{
+ul{
     display: flex;
     gap: 8px;
     list-style: none;
 }
 
-.ver li{
+li{
     background-color: transparent;
     color: #1F2987;
     border: 2px solid #1f2987;
@@ -115,12 +122,12 @@ body{
 }
 
 
-.ver .antonyms{
+.antonyms{
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-.ver .antonyms p{
+.antonyms p{
     display: flex;
     background-color: #1F2987;
     color: white;

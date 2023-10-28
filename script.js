@@ -17,86 +17,32 @@ btn.addEventListener("click", () => {
                             <img src="assets/sound.svg" alt="sound-icon">
                         </button>
                     </div>
-                    <p>${data[0].phonetics}</p>
+                    <p>${data[0].phonetic}</p>
                 </div>
                 <div class="definition">
+                    ${data[0].meanings.map((meaning, index) => `
                     <div class="ver">
-                        <b>${data[0].meanings[0].partOfSpeech}</b>
+                        <b>${meaning.partOfSpeech}</b>
                         <p class="word-meaning">
-                            ${data[0].meanings[0].definitions[0].definition} 
+                            ${meaning.definitions[0].definition}
                         </p>
                         <p class="word-example">
-                            ${data[0].meanings[0].definitions[0].example || ""}
+                            ${meaning.definitions[0].example || ""}
                         </p>
-                        <div class="synonyms">
-                            <p>Synonyms</p>
-                            <ul>
-                                <li>${data[0].meanings[0].definitions[0].synonyms[0]}</li>
-                                <li>${data[0].meanings[0].definitions[0].synonyms[1]}</li>
-                                <li>${data[0].meanings[0].definitions[0].synonyms[2]}</li>
-                            </ul>
-                        </div>
-                        <div class="antonyms">
-                            <p>Antonyms</p>
-                            <ul>
-                                <li>${data[0].meanings[0].definitions[0].antonyms[0]}</li>
-                                <li>${data[0].meanings[0].definitions[0].antonyms[0]}</li>
-                                <li>${data[0].meanings[0].definitions[0].antonyms[0]}</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="ver">
-                    <b>${data[0].meanings[1].partOfSpeech}</b>
-                    <p class="word-meaning">
-                        ${data[0].meanings[1].definitions[0].definition}  
-                    </p>
-                    <p class="word-example">
-                        ${data[0].meanings[1].definitions[0].example || ""}
-                    </p>
                     <div class="synonyms">
                         <p>Synonyms</p>
                         <ul>
-                            <li>${data[0].meanings[1].definitions[0].synonyms[0]}</li>
-                            <li>${data[0].meanings[1].definitions[0].synonyms[0]}</li>
-                            <li>${data[0].meanings[1].definitions[0].synonyms[0]}</li>
+                            ${meaning.synonyms.slice(0, 3).map(synonym => `<li>${synonym}</li>`).join('')}
                         </ul>
                     </div>
                     <div class="antonyms">
                         <p>Antonyms</p>
                         <ul>
-                            <li>${data[0].meanings[1].definitions[0].antonyms[0]}</li>
-                            <li>${data[0].meanings[1].definitions[0].antonyms[0]}</li>
-                            <li>${data[0].meanings[1].definitions[0].antonyms[0]}</li>
+                            ${meaning.antonyms.slice(0, 3).map(antonym => `<li>${antonym}</li>`).join('')}
                         </ul>
                     </div>
-                </div>
-                <div class="ver">
-                    <b>${data[0].meanings[2].partOfSpeech}</b>
-                    <p class="word-meaning">
-                        ${data[0].meanings[2].definitions[0].definition}  
-                    </p>
-                    <p class="word-example">
-                        ${data[0].meanings[2].definitions[0].example || ""} 
-                    </p>
-                    <div class="synonyms">
-                        <p>Synonyms</p>
-                        <ul>
-                            <li>${data[0].meanings[2].definitions[0].synonyms[0]}</li>
-                            <li>${data[0].meanings[2].definitions[0].synonyms[0]}</li>
-                            <li>${data[0].meanings[2].definitions[0].synonyms[0]}</li>
-                        </ul>
-                    </div>
-                    <div class="antonyms">
-                        <p>Antonyms</p>
-                        <ul>
-                            <li>${data[0].meanings[2].definitions[0].antonyms[0]}</li>
-                            <li>${data[0].meanings[2].definitions[0].antonyms[0]}</li>
-                            <li>${data[0].meanings[2].definitions[0].antonyms[0]}</li>
-                        </ul>
-                    </div>
-                </div>
-                </div>
-               `;
+                </div>`)
+                .slice(0, 3).join('')}`;
             sound.setAttribute("src", `${data[0].phonetics[1].audio}`);
         })
         .catch(() => {
