@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Google Sans', sans-serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:32px;
+    padding: 40px 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h3{
+    text-align: center;
+}
+
+.search-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+.search-box input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 16px 8px;
+}
+
+.search-box button{
+    height: 100%;
+    background-color: white;
+    border: none;
+    padding: 16px 8px;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    color: black;
+    padding: 16px 16px;
+    width: fit-content;
+    gap: 16px;
+}
+
+
+.result .word .detail{
+    display: flex;
+    justify-content: space-between;
+
+}
+.result button{
+    border: none;
+    background-color: white;
+    height: fit-content;
+}
+
+.result .definition {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    gap: 32px;
+    margin: 5px 0 20px 0;
+    font-size: 16px;
+}
+
+.result .definition .ver{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.ver b{
+    color:#1F2987 ;
+}
+.ver .synonyms{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.ver .synonyms p{
+    display: flex;
+    background-color: #1F2987;
+    color: white;
+    width: fit-content;
+    padding: 4px 16px;
+    border-radius: 4px;
+}
+
+.ver ul{
+    display: flex;
+    gap: 8px;
+    list-style: none;
+}
+
+.ver li{
+    background-color: transparent;
+    color: #1F2987;
+    border: 2px solid #1f2987;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+
+.ver .antonyms{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.ver .antonyms p{
+    display: flex;
+    background-color: #1F2987;
+    color: white;
+    width: fit-content;
+    padding: 4px 16px;
+    border-radius: 4px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 0;
+}
