@@ -33,16 +33,22 @@ btn.addEventListener("click", () => {
                             ${meaning.definitions[0].example || ""}
                         </p>
                     <div class="synonyms">
-                        <p>Synonyms</p>
-                        <ul>
-                            ${meaning.synonyms.slice(0, 3).map(synonym => `<li>${synonym}</li>`).join('')}
-                        </ul>
+                        ${meaning.synonyms && meaning.synonyms.length>0
+                        ? `<p>Synonyms</p>
+                            <ul>
+                                ${meaning.synonyms.slice(0,3).map(synonym => 
+                                    `<li>${synonym}</li>`).join('')}
+                            </ul>`
+                        : "" }
                     </div>
                     <div class="antonyms">
-                        <p>Antonyms</p>
-                        <ul>
-                            ${meaning.antonyms.slice(0, 3).map(antonym => `<li>${antonym}</li>`).join('')}
-                        </ul>
+                        ${meaning.antonyms && meaning.antonyms.length>0
+                        ? `<p>Antonyms</p>
+                            <ul>
+                                ${meaning.antonyms.slice(0,3).map(antonym => 
+                                    `<li>${antonym}</li>`).join('')}
+                            </ul>`
+                        : "" }
                     </div>
                 </div>`)
                 .join('')}`;
