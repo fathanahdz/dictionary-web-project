@@ -61,7 +61,6 @@ body{
 .result .word .detail{
     display: flex;
     justify-content: space-between;
-    
 
 }
 .word-example {
@@ -78,10 +77,11 @@ body{
 
 .result .definition {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     background-color: white;
     gap: 32px;
-    margin: 5px 0 20px 0;
+    margin: 4px 0 20px 0;
     font-size: 16px;
 }
 
@@ -89,6 +89,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 12px;
+    
 }
 .ver b{
     color:#1F2987 ;
@@ -97,6 +98,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 8px;
+    flex-wrap: wrap;
 }
 .synonyms p{
     display: flex;
