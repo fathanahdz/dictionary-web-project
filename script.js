@@ -16,8 +16,8 @@ btn.addEventListener("click", () => {
                 <div class="word">
                     <div class="detail">
                         <h1>${inpWord}</h1>
-                        <button onclick="playSound()">
-                            <img src="assets/sound.svg" alt="sound-icon">
+                        <button onclick="playSound()" id ="sound-button">
+                            <img src="assets/sound.svg" alt="sound-icon" id="sound-icon">
                         </button>
                     </div>
                     <p>${data[0].phonetic}</p>
@@ -60,4 +60,13 @@ btn.addEventListener("click", () => {
 });
 function playSound(){
     sound.play();
+    // Change the sound icon to "sound-active.svg" when the audio starts playing
+    const soundIcon = document.getElementById("sound-icon");
+    soundIcon.src = "assets/sound-active.svg";
+
+    // Add an event listener to change the sound icon back to the original icon when the audio finishes playing
+    sound.addEventListener("ended", () => {
+        soundIcon.src = "assets/sound.svg";
+    });
+
 }
