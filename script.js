@@ -16,9 +16,14 @@ btn.addEventListener("click", () => {
                 <div class="word">
                     <div class="detail">
                         <h1>${inpWord}</h1>
-                        <button onclick="playSound()" id ="sound-button">
-                            <img src="assets/sound.svg" alt="sound-icon" id="sound-icon">
-                        </button>
+                        <div class="sound">
+                        ${data[0].phonetics[0].audio && data[0].phonetics[0].audio.length>0
+                            ?
+                           ` <button onclick="playSound()" id="sound-button">
+                                    <img src="assets/sound.svg" alt="sound-icon" id="sound-icon">
+                            </button>`:""
+                        }
+                        </div>
                     </div>
                     <p>${data[0].phonetic}</p>
                 </div>
