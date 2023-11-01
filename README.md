@@ -20,7 +20,7 @@ Website ini dibuat untuk memenuhi tugas Mid Mata Kuliah Pemrograman Web 20231. W
 - **HTML**: Untuk struktur halaman web.
 - **CSS**: Untuk styling tampilan.
 - **JavaScript**: Untuk interaksi dengan API, manipulasi DOM, dan pengaturan audio.
-- **Dictionary API** Menggunakan [Free Dictionary API](https://dictionaryapi.dev/).
+- **Dictionary API**: Menggunakan [Free Dictionary API](https://dictionaryapi.dev/).
 
 ## Kendala Pengembangan
 Pada tahap awal ideasi project, direncanakan untuk bisa menampilkan informasi definisi kata dalam bahasa lainnya, namun dalam proses pengembangan kemudian ditemukan kendala sulitnya mendapatkan API Kamus bahasa asing (selain bahasa inggris) yang gratis. Oleh karena itu, pengembang memutuskan untuk mengganti fitur ini dengan menampilkan beberapa definisi sesuai dengan penggunaannya (noun/verb/etc) jika datanya tersedia untuk setiap kata.
