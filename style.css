@@ -22,6 +22,15 @@ body{
 
 .container h3{
     text-align: center;
+    color: white;
+}
+
+.result h3{
+    background-color: #87281f;
+    max-width: 240px;
+    width: 100%;
+    padding: 24px 16px;
+    align-self: center;
 }
 
 .search-box{

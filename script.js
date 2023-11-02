@@ -9,11 +9,9 @@ btn.addEventListener("click", () => {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
-            if (Array.isArray(data)&& data.length>0){
-                const wordData = data[0];
-            }
-            result.innerHTML = `
-                <div class="word">
+            if (data.title === undefined){
+              result.innerHTML = `
+                <div class="word"> 
                     <div class="detail">
                         <h1>${inpWord}</h1>
                         <div class="sound">
@@ -58,7 +56,12 @@ btn.addEventListener("click", () => {
                 </div>`)
                 .join('')}`;
             sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
+            }
+            else {
+                result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
+            }  
         })
+            
         .catch(() => {
             result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
         });
